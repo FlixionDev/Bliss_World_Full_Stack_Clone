@@ -1,0 +1,212 @@
+{
+  "totalData": [
+    {
+      "id": 1,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/385/1214/BLISS_Bright_Idea_Vitamin_C_SERUM_30ml_FINALupdated__36719.1667516793.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/385/1598/Bright_Idea_2__73773resized__85023.1667516793.jpg",
+      "title": "Bright Idea Serum",
+      "description": "Vitamin C + Tri-Peptide Collagen Protecting &amp; Brightening Serum",
+      "price": 28
+    },
+    {
+      "id": 2,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/425/1314/Rest_Assured_Eye_Cream_Front__54512.1667516639.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/425/1601/Rest-assured-results__62535resized__32760.1667516639.jpg",
+      "title": "Rest Assured Eye Cream",
+      "description": "Dark Circle Reducing &amp; Depuffing Eye Cream For Refreshed Eyes",
+      "price": 25
+    },
+    {
+      "id": 3,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/300/1141/lemonsage_body_butter_sku_1003_10000_01__74065.1668812297.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/300/1503/LS-Body-Butter-reviews__64796.1668812297.jpg",
+      "title": "Lemon &amp; Sage Body Butter",
+      "description": "Lemon Sage Maximum Moisture Cream",
+      "price": 25
+    },
+    {
+      "id": 4,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/396/1435/40ML_1000x1000_with_shadows_seals__83429.1667517183.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/396/1249/Bliss_Website_Block_Star_1080x1080_1__69864.1667517183.jpg",
+      "title": "Block Star",
+      "description": "Mineral Daily Sunscreen",
+      "price": 25
+    },
+    {
+      "id": 5,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/289/970/fab_foaming_cleanser_sku_1003_30040_01__17937.1667516506.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/289/1047/fab_foaming_cleanser_to_go_2__16468.1667516506.jpg",
+      "title": "Fab Foaming Exfoliating Cleanser",
+      "description": "2-in-1 Cleanser &amp; Exfoliator With Bamboo Buffers",
+      "price": 35
+    },
+    {
+      "id": 6,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/346/1029/lemonsage_shampoo_pro_sku_1007_70100_01__93646.1667516757.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/346/1070/lemon_sage_shampoo_pro_2__38814.1667516757.jpg",
+      "title": "Lemon &amp; Sage Supershine Shampoo",
+      "price": 45
+    },
+    {
+      "id": 7,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/466/1454/Blackhead_Breadown_Front__80282.1667516302.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/466/1537/Blackhead-What_it_Does_1__76788.1667516302.jpg",
+      "title": "Blackhead Breakdown",
+      "description": "Blackhead Purifying Stick",
+      "price": 18
+    },
+    {
+      "id": 8,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/405/1471/Youth_Got_This_1000x1000__26933.1667517261.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/405/1276/Youth_Got_This_Serum_Swatch_A__19693.1667517261.jpg",
+      "title": "Youth Got This Serum",
+      "description": "Prevent-4™ Pure Retinol Advanced Skin Smoothing Serum",
+      "price": 28
+    },
+    {
+      "id": 9,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/406/1277/Youth_Got_This_Moisturizer_Front__84970.1667517358.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/406/1499/YGT-Moisturizer-results__24255.1667517358.jpg",
+      "title": "Youth Got This  Moisturizer",
+      "description": "Prevent-4™ Pure Retinol Deep Hydration Moisturizer",
+      "price": 28
+    },
+    {
+      "id": 10,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/315/1603/thats_incredi_peel_sku_1003_30031_01__44289resized__35680.1667516975.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/315/1115/thats_incredi_peel_2__52859.1667516975.jpg",
+      "title": "That's Incredi-peel Glycolic Acid Pads",
+      "description": "Spa-strength Glycolic Resurfacing Pads to Smooth &amp; Brighten",
+      "price": 20
+    },
+    {
+      "id": 11,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/347/991/lemon_sage_conditioner_pro_1_sku_1007_70101_01__64566.1667516926.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/347/1068/lemon_sage_conditioner_pro_2__20708.1667516926.jpg",
+      "title": "Lemon &amp; Sage Conditioning Rinse",
+      "description": "Hydrating Conditioner for Dry Hair",
+      "price": 45
+    },
+    {
+      "id": 12,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/386/1216/BLISS_Bright_Idea_Vitamin_C_EYE_CREAM_15ml_JAR_FINALupdated__34834.1667517646.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/386/1217/BLISS_Bright_Idea_Vitamin_C_EYE_CREAM_15ml_SWATCH_FINAL__45470.1667517646.jpg",
+      "title": "Bright Idea Eye Cream",
+      "description": "Vitamin C + Tri-Peptide Collagen Protecting Eye Cream",
+      "price": 25
+    },
+    {
+      "id": 13,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/421/1478/Overnight_Mask_Front__83087.1665086120.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/421/1312/Overnight_Mask_Swatch_B__24160.1665086120.jpg",
+      "title": "Fabulips Overnight Lip Mask",
+      "description": "Vegan Lip Mask",
+      "price": 18
+    },
+    {
+      "id": 14,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/378/1171/glowhydrate_serum_sku_1003_30110_01__56680.1668812317.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/378/1170/glowhydrate_2__43253.1668812317.jpg",
+      "title": "Glow &amp; Hydrate Day Hyaluronic Serum",
+      "description": "Niacinamide + Hyaluronic Acid Day Serum",
+      "price": 22
+    },
+    {
+      "id": 15,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/380/1177/BLISS_Minty_Scrub_Soap_BAR_LOGO_FINAL__36040.1667240011.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/380/1178/BLISS_Minty_Scrub_Soap_BAR_STUDS_FINAL__56828.1667240011.jpg",
+      "title": "Mint Scrub Soap",
+      "description": "Super-Cooling Mint Bath Bar",
+      "price": 16
+    },
+    {
+      "id": 16,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/285/960/bloodorangewhitepepper_body_butter_sku_1003_10003_01__81918.1669400279.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/285/1097/orange_pepper_body_butter_1__19240.1669400279.jpg",
+      "title": "Blood Orange &amp; White Pepper Body Butter",
+      "description": "Maximum Orange Moisture Cream",
+      "price": 12
+    },
+    {
+      "id": 17,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/284/1172/BLISS_Aloe_Leaf_Peppermint_FOOT_CREAM_120mlxNEWTUBE__11001.1667240101.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/284/1031/aloe_peppermint_foot_cream_2__35329.1667240101.jpg",
+      "title": "Aloe Leaf &amp; Peppermint Foot Cream",
+      "description": "Super Softening &amp; AHA Exfoliating Cooling Foot Cream",
+      "price": 25
+    },
+    {
+      "id": 18,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/398/1259/DQ_All_Day_Serum_Front__51201.1667517426.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/398/1260/DQ_All_Day_Serum_Swatch_B__52477.1667517426.jpg",
+      "title": "Drench &amp; Quench Serum",
+      "description": "All-Day Moisture Serum",
+      "price": 27
+    },
+    {
+      "id": 19,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/463/1436/12ML_1000x1000_with_shadows_seals__16427.1667517015.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/463/1495/Bliss_Website_Block_Star_1080x1080__84071.1667517015.jpg",
+      "title": "Block Star Mini",
+      "description": "Mineral Daily Sunscreen",
+      "price": 7
+    },
+    {
+      "id": 20,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/384/1211/BLISS_Bright_Idea_Vitamin_C_MOISTURIZER_50ml_JAR_FINALupdated__91912.1667517285.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/384/1513/moisturizer-results__14911.1667517285.jpg",
+      "title": "Bright Idea Moisturizer",
+      "description": "Vitamin C + Tri-Peptide Collagen Protecting &amp; Brightening Moisturizer",
+      "price": 26
+    },
+    {
+      "id": 21,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/392/1235/Clarifying_gel_cleanser_front__96525.1667516843.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/392/1236/Clarifying_gel_cleanser_swatch__24378.1667516843.jpg",
+      "title": "Clear Genius Cleanser",
+      "description": "Clarifying Gel Cleanser",
+      "price": 15
+    },
+    {
+      "id": 22,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/457/1406/Bliss_Website_1080x1080_031122__02298.1667600021.jpg",
+      "title": "Clear Genius Toner + Serum Travel Mini",
+      "description": "2-in-1 Clarifying Toner + Serum",
+      "price": 8
+    },
+    {
+      "id": 23,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/399/1258/DrenchQuench_Updated_Front__12756.1614899657.1280.1280__07783.1668452037.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/399/1431/BLISS_DQ_Rich_Water_Cream_SWATCH__87995.1668452037.jpg",
+      "title": "Drench &amp; Quench Moisturizer",
+      "description": "Cream-To-Water Hydrator For All-Day Moisture",
+      "price": 24
+    },
+    {
+      "id": 24,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/296/975/grapefruitaloe_body_butter_sku_1003_10002_01__05959.1669400272.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/296/1050/grapefruit_aloe_body_butter_2__44285.1669400272.jpg",
+      "title": "Grapefruit &amp; Aloe Body Butter",
+      "description": "Grapefruit Maximum Moisture Cream",
+      "price": 12
+    },
+    {
+      "id": 25,
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/303/1071/lemon_sage_soapy_suds_2__10203.1667516619.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/303/1071/lemon_sage_soapy_suds_2__10203.1667516619.jpg",
+      "title": "Lemon &amp; Sage Soapy Suds Body Wash",
+      "description": "Lemon Sage Body Wash with Aloe",
+      "price": 20
+    },
+    {
+      "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/311/1006/poetic_waxing_sku_1003_10040_01__21989.1667517470.jpg",
+      "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/311/1098/poetic_waxing_1__31124.1667517470.jpg",
+      "title": "Poetic Waxing At Home Wax Kit",
+      "description": "Straight-from-the-spa Hair Removal Kit",
+      "price": 25
+    }
+  ],
+  "categories": {
+    "BEST SELLERS BY CATEGORY": ["Body & Hair Care", "Skincare"]
+  }
+}

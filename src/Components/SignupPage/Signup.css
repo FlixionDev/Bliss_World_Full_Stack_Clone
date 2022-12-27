@@ -1,0 +1,432 @@
+.buttonfx:hover {
+    color: #fff;
+    box-shadow: 3px 3px 0 #fdb1be;
+}
+
+.createaccount .buttonfx {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.createaccount .buttonfx .button::active {
+    color: #fff;
+}
+
+.createaccount .buttonfx .button {
+    background: 0 0;
+    border: 0;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+}
+
+.bouncein:hover:before {
+    transition-timing-function: cubic-bezier(.52,1.64,.37,.66)!important;
+}
+
+.buttonfx::before {
+    background: #8cd0e3;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+.buttonfx::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #948ad3;
+    z-index: -1;
+    transform: translate3D(0,-100%,0);
+    transition: all .5s;
+}
+
+.bouncein:hover::after {
+    transition-timing-function: cubic-bezier(.52,1.64,.37,.66)!important;
+}
+
+.angleinleft:hover:after {
+    transform: rotate(0);
+    transition: all .5s;
+}
+
+.angleinleft:after {
+    width: 200%;
+    transform-origin: 0 bottom;
+   
+}
+
+.buttonfx:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #948ad3;
+    z-index: -1;
+    
+}
+
+.button {
+    line-height: 1rem;
+    transition: all .15s ease;
+    
+}
+
+.buttonfx {
+    color: #fff;
+    outline: 0;
+    background: 0 0!important;
+   margin: auto;
+   margin-top: 20px;
+   width: 35%;
+    border: none;
+    border-radius: 0;
+    box-shadow: 3px 3px 0 #f5ea77;
+    text-transform: uppercase;
+    line-height: 2;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 1;
+    
+}
+
+
+.buttonfx::before {
+    background: #8cd0e3;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+
+main {
+    display: block;
+}
+
+.createaccount .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.body.createaccount .account-background {
+    padding-bottom: 80px!important;
+    margin:auto;
+}
+.account-background {
+    min-height: 0;
+}
+
+.account-background {
+    width: 100%;
+    margin: 0;
+    background-color: #f6ecf3;
+    background-image: url(https://cdn11.bigcommerce.com/s-1vmlni8o2p/product_images/uploaded_images/circle-bk.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    
+}
+
+.account-wrapper {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 937px;
+    background-color: #fff;
+}
+
+.createaccount .account-wrapper h1 {
+    font-size: 30px;
+    line-height: 34px;
+}
+.account-wrapper h1 {
+    margin: 0;
+    
+}
+.body h1, body h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 500;
+    
+    color: #000;
+}
+
+.page-heading {
+   
+    text-align: center;
+}
+
+.account-wrapper .preheader {
+    text-align: center;
+}
+
+.body .preheader, body .preheader {
+    font-family: 'Archer A','Archer B';
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.createaccount .account--fixed {
+    width: 80%;
+}
+
+.createaccount .account {
+    padding: 0;
+}
+
+@media (min-width: 801px){
+.account--fixed {
+    margin: 0 auto;
+  
+}}
+
+.account-body {
+    margin: 0 auto;
+}
+
+.account-body {
+   
+    max-width: none;
+    width: auto;
+}
+
+.account-body:after, .account-body:before {
+    content: " ";
+    display: table;
+}
+
+.createaccount .account-body form {
+    margin-bottom: 0;
+}
+
+.form-row {
+    margin: 0 -0.75rem;
+    max-width: none;
+    width: auto;
+}
+
+@media (min-width: 551px){
+.form-row--half >.form-field:nth-child(odd) {
+    clear: left;
+}}
+
+@media (min-width: 551px){
+.form-row--half .form-field {
+    width: 50%;
+}}
+
+
+
+.form-row .form-field {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+   
+    float: left;
+    max-width: none;
+}
+
+.form-field {
+    display: block;
+    margin: 0 0 2rem;
+    
+}
+
+.form-label {
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    
+}
+
+.form-label small {
+    float: right;
+    margin-top: 0.35714rem;
+}
+
+.form-label small {
+    color: #757575;
+    font-size: .71429rem;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+small {
+ 
+    line-height: inherit;
+}
+
+.createaccount .form-input {
+    height: 48px;
+    border-radius: 0;
+    border-color: #ccc;
+}
+
+.form-input {
+ 
+    appearance: none;
+    background-color: #fff;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    color: #666;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 15px;
+    transition: border-color .1s ease-out;
+    width: 100%;
+}
+
+.form-field:after {
+    clear: both;
+}
+.form-field:after {
+    content: " ";
+    display: table;
+}
+
+.createaccount .form-select {
+    background-size: 32px;
+    
+    background-position-y: center;
+}
+
+.createaccount .form-select {
+    height: 48px;
+    border-radius: 0;
+    border-color: #ccc;
+}
+
+.form-select {
+   
+    border-style: solid;
+    border-width: 1px;
+    color: #666;
+    font-size: 14px;
+    background-position: right 0.57143rem top 0.71429rem;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    margin: 0;
+    outline: 0;
+    width: 360px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* .form-checkbox {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+} */
+
+.account-body .form-label:last-child {
+    width: auto;
+    display: inline-block;
+}
+.form-checkbox+.form-label:last-child, .form-radio+.form-label:last-child {
+    
+    margin-bottom: -0.28571rem;
+}
+
+
+.form-checkbox+.form-label, .form-radio+.form-label {
+    
+    font-size: 1rem;
+    font-weight: 400;
+   
+    padding-left: 1.85714rem;
+    position: relative;
+    vertical-align: baseline;
+    
+}
+
+@media (min-width: 551px){
+.form-actions {
+    margin-top: 1.5rem;
+}}
+
+.form-actions {
+    margin: 0 auto;
+    max-width: 85.71429rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.form-actions {
+    background: 0 0;
+    border: 0;
+   
+}
+
+@media (min-width: 551px){
+.form-actions .button, .form-actions a, .form-actions input {
+    margin-bottom: 0;
+    width: auto;
+}}
+.form-actions .button .form-actions input {
+    vertical-align: top;
+    width: 100%;
+}
+
+.Terms_and_condition {
+    text-align: center;
+    max-width: 300px;
+    color: #000;
+    font-weight: 550;
+    font-size: 14px;
+    margin: 0 auto;
+
+    margin-top: 20px;
+}
+
+.createaccount .account-body form .Terms_and_condition p {
+    margin-bottom: 0;
+}
+
+.Terms_and_condition p {
+   
+    margin-bottom: 25px;
+}
+
+a {
+    color: #000;
+    line-height: normal;
+}
+
+a {
+    transition: color .15s ease;
+}
+a {
+   
+    text-decoration: underline;
+}
+
