@@ -29,7 +29,7 @@ export const ProductList = () => {
     fetch(`https://blissworld.glitch.me/${endpoint1}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log("total data", data);
+         console.log("total data", data);
         setTotalProducts(data.totalData);
         setCategories({ ...data.categories });
       })
