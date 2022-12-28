@@ -1,0 +1,24 @@
+.bliss-user-header {
+    font-family: 'Allerta Stencil', sans-serif !important;
+    text-align: center;
+}
+
+.bliss-user-header>h1 {
+    font-size: x-large;
+}
+
+.bliss-user-header>p {
+    margin-top: -10px;
+}
+
+.css-1fzpoyk>img {
+    border-radius: 50%;
+}
+
+.css-1qzevvg>img:first-child {
+    content: url("https://img.icons8.com/ios-glyphs/512/long-arrow-left.png");
+}
+
+.css-1qzevvg>img:last-child {
+    content: url("https://img.icons8.com/ios-glyphs/512/long-arrow-right.png");
+}

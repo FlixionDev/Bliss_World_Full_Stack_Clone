@@ -1,0 +1,344 @@
+.login {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+.login>.container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f6ecf3;
+    /* background-image: url(../img/circle-bk.png); */
+    background-size: cover;
+    background-position: center center;
+}
+.account-background {
+    min-height: 0;
+}
+.login-row {
+    padding: 50px 48px;
+    max-width: 100%;
+}
+.account-background {
+    margin: 0;
+    background-color: #f6ecf3;
+    background-image: url(https://cdn11.bigcommerce.com/s-1vmlni8o2p/product_images/uploaded_images/circle-bk.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    min-height: 600px;
+}
+.login-common-container {
+    text-align: center;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    
+  
+    
+}
+.new-customer {
+    background-color: #fff;
+    padding: 90px 82px;
+    width: 47.5%;
+    text-align: center;
+    margin: 0 5% 0 0;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+
+.panel {
+    position: relative;
+}
+
+.new-customer .panel-header, .panel-body {
+    background-color: transparent;
+    padding: 0;
+}
+.new-customer h3 {
+    margin-bottom: 12px;
+}
+
+.body h3, body h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+}
+
+.login p {
+    margin-bottom: 18px;
+}
+
+ .panel-body {
+    background-color: transparent;
+    padding: 0;
+}
+.panel-body {
+    margin-bottom: 1.5rem;
+   
+    
+}
+.new-customer {
+    
+    text-align: center;
+}
+
+.new-customer-fact {
+    list-style-type: none;
+}
+
+.new-customer-fact {
+    padding-left: 0.78571rem;
+}
+
+.new-customer button {
+    margin: 0;
+}
+
+.new-customer-fact-list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #8cd0e3;
+    background: linear-gradient(to right,#8cd0e3 0,#f08ccd 100%);
+}
+.new-customer-fact-list::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 7;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    
+    background: linear-gradient(to right,#8cd0e3 0,#f08ccd 100%);
+}
+:before {
+    box-sizing: border-box;
+}
+.buttonfx {
+    color: #fff;
+    outline: 0;
+    background: 0 0!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 3px 3px 0 #f5ea77;
+    text-transform: uppercase;
+    line-height: 2;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.button {
+    line-height: 1rem;
+    transition: all .15s ease;
+}
+
+
+.new-customer button {
+    margin: 0;
+    margin-top: 30px;
+    width: 150px;
+}
+.buttonfx {
+    color: #fff;
+    outline: 0;
+    background: 0 0!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 3px 3px 0 #f5ea77;
+    text-transform: uppercase;
+    line-height: 2;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 1;
+    
+}
+
+.buttonfx:before {
+    background: #8cd0e3;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+ .buttonfx:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+   
+    transition: all .5s;
+}
+
+.angleinleft:after {
+    width: 200%;
+    transform-origin: 0 bottom;
+    transform: translate3D(-50%,0,0) rotate(-50deg);
+}
+.buttonfx:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #948ad3;
+    z-index: -1;
+   
+    transition: all .5s;
+}
+
+.login-row:before {
+    content: " ";
+    display: table;
+}
+
+a {
+    transition: color .15s ease;
+}
+a {
+    background-color: transparent;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 90px 82px;
+    width: 47.5%;
+    margin: 0 0 0 -4px;
+    text-align: center;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+
+
+.panel {
+    position: relative;
+}
+
+.login-form-header h3 {
+    letter-spacing: .25px;
+    margin: 0 0 12px 0;
+}
+
+
+.login p {
+    margin-bottom: 18px;
+}
+
+.form-field {
+    display: block;
+    margin: 0 0 2rem;
+    max-width: none;
+}
+
+ .form-field:before {
+    content: " ";
+    display: table;
+}
+
+.login-form .form-input {
+    border-radius: 0;
+}
+
+.form-input {
+  
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+   
+    color: #666;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 15px;
+    transition: border-color .1s ease-out;
+    width: 100%;
+}
+
+.form-field:after {
+    clear: both;
+}
+
+.form-field:after{
+    content: " ";
+    display: table;
+}
+
+@media (min-width: 551px){
+    .form-actions {
+        margin-top: 1.5rem;
+    }
+}
+
+.form-actions {
+    margin: 0 auto;
+    max-width: 85.71429rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.login-form .buttonfx {
+    background: #8cd0e3!important;
+}
+
+.form-action-sub-block {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 29.5%;
+    padding: 0;
+}
+
+.login-btn {
+    background: 0 0;
+    border: 0;
+    margin: 0;
+    font-family: CeraStencilPRO;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    width: 100%!important;
+    padding: 10.5px 0;
+    color: white;
+}
+
+.login-form .forgot-password {
+    display: block;
+    margin: 12px 0 0 0;
+}
+
+a {
+    color: #000;
+    line-height: normal;
+}
+
