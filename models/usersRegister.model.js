@@ -6,7 +6,7 @@ const userSchema = mg.Schema({
     password: {
       type: String,
       min: 6,
-      max: 32,
+      max: 16,
       required: true,
     },
   

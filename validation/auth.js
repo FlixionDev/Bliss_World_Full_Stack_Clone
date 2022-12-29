@@ -1,5 +1,3 @@
-const { getMaxListeners } = require("../models/users.model");
-
 const validateEmail = (email)=>{
     if(email.includes('@') && email.includes('.com'))
     return true;
@@ -17,5 +15,7 @@ const validatePassword = (password)=>{
     if(password.length >= 8 && flag===true)return true;
     return false;
 }
-let ff = validatePassword("ritik@12");
-console.log(ff);
+
+module.exports = {
+    validateEmail,validatePassword
+}
