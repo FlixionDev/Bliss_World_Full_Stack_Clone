@@ -3,6 +3,7 @@ const cartRoute=require('./routes/cart.routes')
 const connect=require('./db/connect')
 const app=express()
 
+app.use(express.json())
 app.use(cartRoute)
 const port=Number(process.argv[2])||5000
 connect().then(()=>{
