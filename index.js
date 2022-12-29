@@ -4,6 +4,13 @@ const ConnectDB = require('./connection/connect');
 const app = express();
 const registerRouter = require('./controllers/usersRegister.controller');
 const loginRouter = require('./controllers/userLogin.controller');
+
+/*middle ware testing*/
+const AuthMiddleWare = require('./validation/users.middleware');
+const router = require('./controllers/tempo');
+app.use('/user',AuthMiddleWare,router);
+/*middle ware testing*/
+
 app.use(express.json())
 app.use(cors());
 
