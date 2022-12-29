@@ -1,27 +1,9 @@
+
 {
-  
-  "BEST SELLERS BY CATEGORY": [
-    "Body & Hair Care",
-    "Skincare"
-  ],
-  
-  "BY CATEGORY":["Best Sellers", "Mini Bliss", "Cleansers", "Toners", "Exfoliators & Treatments", "Face Masks","Moisturizers + SPF", "Serums & Oils", "Eye & Lips", "Skincare Sale", "Shop All Skincare"],
-  "BY COLLECTION":["blissPRO", "Clear Genius", "Fabulips", "Mighty Biome", "Makeup Melt", "Disappearing Act"],
-  "BY CONCERN" : ["Acne & Blemishes", "Discoloration", "Fine Lines", "Dullnes", "Texture / Pores", "Sensitive Skin", "Dryness"],
-  "BY SKIN TYPE":["Combination", "Dry", "Normal", "Oily",  "Skincare for Sensitive Skin" ],
-  "SHOP BY INGREDIENT":["Glycolic Acid", "Hyaluronic Acid","Niacinamide","Retinol","Salicylic Acid", "Vitamin C"],
-
-  "BODY & HAIR CARE":["Best Sellers", "Body Wash & Scrubs", "Body Moisturizers", "Hair Removal", "Body Firming","Hair Care", "Sale", "Shop all Body and Hair Care", "Hair Removal & Firming", "Vegan Skincare"],
-  "BY COLLECTION":["Beauty To Go", "Exclusive Pro Sizes", "Cloud 9", "Lemon & Sage"],
-
-
-
-  "BY CATEGORY":["Body & Hair Sets", "Skincare Sets"]
-
-
-  
-
-
-
-
+ 
+  "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/385/1214/BLISS_Bright_Idea_Vitamin_C_SERUM_30ml_FINALupdated__36719.1667516793.jpg",
+  "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/385/1598/Bright_Idea_2__73773resized__85023.1667516793.jpg",
+  "title": "Bright Idea Serum",
+  "description": "Vitamin C + Tri-Peptide Collagen Protecting &amp; Brightening Serum",
+  "price": 28
 }

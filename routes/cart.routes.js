@@ -2,7 +2,8 @@ const express=require('express')
 const router=express.Router()
 
 router.get('/cart',async(req,res)=>{
-    console.log('in /cart route')
+    const {page=1,pageLimit=5,sortOrder='asc',sortBy='price'}=req.query
+    
 })
 
 module.exports=router
