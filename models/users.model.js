@@ -18,13 +18,13 @@ const userSchema = mg.Schema({
     },
     cartItems: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mg.Schema.Types.ObjectId,
         ref: "cart",
       },
     ],
     orderedItems: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mg.Schema.Types.ObjectId,
         ref: "order",
       },
     ],
