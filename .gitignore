@@ -12,6 +12,7 @@
 /build
 /.pnp
 .pnp.js
+.env
 /.env
 
 # testing
