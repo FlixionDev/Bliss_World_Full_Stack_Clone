@@ -1,11 +1,13 @@
 const express=require('express');
-const router=express.Router();
-const Products = require('../model/products.model');
+const productRouter=express.Router();
+const orderRouter=express.Router();
+
+const {Productsmodel,Ordersmodel} = require('../model/products.model');
 
 
-router.get('/',async (req,res)=>{
+productRouter.get('/',async (req,res)=>{
     try{
-        const products=await Products.find();
+        const products=await Productsmodel.find();
         return res.send(products)
     }catch(err){
         return res.send({
@@ -14,11 +16,11 @@ router.get('/',async (req,res)=>{
     }
 })
 
-router.get('/:id',async (req,res)=>{
+productRouter.get('/:id',async (req,res)=>{
     const id=req.params.id;
     // console.log(id);
     try{
-        const products=await Products.findById(id);
+        const products=await Productsmodel.findById(id);
         return res.send(products)
     }catch(err){
         return res.send({
@@ -26,4 +28,34 @@ router.get('/:id',async (req,res)=>{
         })
     }
 })
-module.exports=router;
+orderRouter.get('/',async(req,res)=>{
+    try{
+        let order=await Ordersmodel.find();
+        return res.send(order)
+    }catch(err){
+        return res.send({
+            message : "error occur"
+        })
+    }
+})
+orderRouter.post('/',async(req,res)=>{
+    let body=req.body;
+    try{
+        let order=await Ordersmodel.create(body);
+        //console.log(order)
+        return res.send({order})
+    }catch(err){
+        console.log(err);
+        return  res.status(404).send({
+            message : "error occur"
+        })
+    }
+    
+    
+
+})
+
+module.exports={
+    productRouter,
+    orderRouter
+}

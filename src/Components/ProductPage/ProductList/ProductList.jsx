@@ -26,11 +26,11 @@ export const ProductList = () => {
   const [categories, setCategories] = useState({});
   // const endpoint1 = "bestSeller";
   useEffect(() => {
-    fetch(`https://blissworld.glitch.me/${endpoint1}`)
+    fetch(`http://localhost:5000/products/`)
       .then((res) => res.json())
       .then((data) => {
          console.log("total data", data);
-        setTotalProducts(data.totalData);
+        setTotalProducts(data);
         setCategories({ ...data.categories });
       })
       .catch((err) => {
@@ -45,7 +45,7 @@ export const ProductList = () => {
           <label>SORT BY:</label>
           <Menu zIndex="dropdown">
             <MenuButton >Default<ChevronDownIcon /></MenuButton>
-            <MenuList zIndex="1000" >
+            <MenuList zIndex="-1000" >
               <MenuItem>Default</MenuItem>
               <MenuItem>A to Z</MenuItem>
               <MenuItem>Z to A</MenuItem>
