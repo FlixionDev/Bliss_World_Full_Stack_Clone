@@ -4,6 +4,7 @@ const ConnectDB = require('./connection/connect');
 const app = express();
 const registerRouter = require('./controllers/usersRegister.controller');
 const loginRouter = require('./controllers/userLogin.controller');
+const getUserInfo = require('./controllers/getUserInfo.controller');
 
 /*middle ware testing*/
 const AuthMiddleWare = require('./validation/users.middleware');
@@ -16,6 +17,7 @@ app.use(cors());
 
 app.use('/register',registerRouter);
 app.use('/login',loginRouter);
+app.use('/user',getUserInfo);
 
 ConnectDB().then(()=>{
     app.listen(4000,()=>{
