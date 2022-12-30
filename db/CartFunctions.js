@@ -87,7 +87,7 @@ async function deleteCartProduct(userId,productId){
   if(!productInCart){
     throw new Error('Product not available in cart refresh')
   }
-  if(String(productInCart.user._id)!==String(userId)){
+  if(productInCart.user._id!==userId){
      throw new Error('Please login first to make changes in cart')
  }
  productInCart=await CartModel.findByIdAndDelete(productId)
