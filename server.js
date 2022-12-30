@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const ConnectDB = require('./connection/connect');
+const ConnectDB = require('./db/connect');
 const app = express();
 const registerRouter = require('./controllers/usersRegister.controller');
 const loginRouter = require('./controllers/userLogin.controller');
