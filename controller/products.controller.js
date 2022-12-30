@@ -40,8 +40,10 @@ orderRouter.get('/',async(req,res)=>{
 })
 orderRouter.post('/',async(req,res)=>{
     let body=req.body;
+    //let arr=[...body]
+    console.log(body);
     try{
-        let order=await Ordersmodel.create(body);
+       let order=await Ordersmodel.insertMany(body);
         //console.log(order)
         return res.send({order})
     }catch(err){
