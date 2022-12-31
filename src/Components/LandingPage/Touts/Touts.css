@@ -1,0 +1,31 @@
+.tout-div {
+    /* margin-top: 100px; */
+    /* display: flex; */
+    width: 1140px;
+    margin: 10vh auto;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC;
+}
+
+.tout-div>h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: medium;
+}
+
+.tout-div ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+}
+
+.gif_img {
+    padding: 25px 10px;
+}

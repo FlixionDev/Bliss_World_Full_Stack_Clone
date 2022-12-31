@@ -16,10 +16,8 @@ const Checkout = () => {
   const cartData = useSelector((storeData) => {
     return storeData.cart;
   });
-  //console.log([...cartData])
 
   const sendToOrderConfirm=()=>{
-
     nav("/orderconfirm")
   }
 

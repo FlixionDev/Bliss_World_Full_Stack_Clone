@@ -1,0 +1,79 @@
+.max-container {
+  background-image: linear-gradient(rgb(218, 228, 227), rgb(209, 183, 208));
+  display: flex;
+  /* gap: 1%; */
+  margin: auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.css-lcljtj {
+  margin-top: -30px;
+}
+
+.child1-box {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-left: 5%; */
+}
+
+.child01 > img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.child11 > img {
+  width: 90%;
+}
+
+.child2-box {
+  margin: 50px auto;
+}
+
+.btn1452 {
+  color: white;
+  width: 180px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #8cd0e3;
+  box-shadow: 3px 3px 3px #f0f031;
+  -webkit-transition: opacity ls ease-in-out;
+  -moz-transition: opacity ls ease-in-out;
+  -ms-transition: opacity ls ease-in-out;
+  -o-transition: opacity ls ease-in-out;
+  transition: opacity ls ease-in-out;
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin: auto;
+}
+
+.btn1452:hover {
+  background-color: #948ad3;
+  color: white;
+  box-shadow: 3px 3px 3px pink;
+}
+
+.child02 {
+  font-size: small;
+  font-family: "Allerta Stencil", sans-serif;
+  padding: 5px 5px;
+}
+
+.child02 > h1 {
+  margin-bottom: -10px;
+}
+
+.child12 {
+  font-size: small;
+  font-family: "Allerta Stencil", sans-serif;
+  padding: 5px 5px;
+}
+
+.child12 > h1 {
+  margin-bottom: -10px;
+}
