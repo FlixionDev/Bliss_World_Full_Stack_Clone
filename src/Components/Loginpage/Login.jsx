@@ -40,65 +40,26 @@ function Login() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    let email = formData.email;
-    let password = formData.password;
-    console.log(email, password);
-
-    let validUser = false;
-    let userNotAllowed = false;
-
-    userdata.map(function (ele) {
-      if (ele.email == email && ele.password == password) {
-        validUser = true;
-        let obj={
-          email:ele.email,
-          name:ele.name,
-          address:ele.name
-        }
-        localStorage.setItem("userdata",JSON.stringify(obj))
-        localStorage.setItem("loginStatus",true)
-      } else if (ele.email == email) {
-
-
-        userNotAllowed = true;
-        return;
-      }
-    });
-    if (validUser) {
-      toast({
-        title: "Logged in successfully",
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-        position: "top",
-      });
-      setTimeout(() => {
-        navigate("/");
-      }, 1000);
-    } else if (userNotAllowed) {
-      setFormData(initState);
-      toast({
-        title: "Invalid Credentials.",
-        description: "Try again.",
-        status: "error",
-        duration: 2000,
-        isClosable: true,
-        position: "center",
-      });
-    } else {
-      toast({
-        title: "user doesnt exist",
-        description: "Register First",
-        status: "error",
-        duration: 2000,
-        isClosable: true,
-      });
-      setUserdata(initState);
-      setTimeout(() => {
-        navigate("/signup");
-      }, 1000);
-    }
+    fetch("https://noiseless-soapy-zucchini.glitch.me/login",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify({
+        email:formData.email,
+        password:formData.password
+      })
+    }).then((responce)=>{
+        responce.json().then(data=>{
+         if(data.message){
+          alert(data.message);
+         }
+         if(data.message=='login successfully...'){
+           localStorage.setItem('userToken',data.token)
+          navigate('/')
+         }
+        })
+    })
   };
 
   return (

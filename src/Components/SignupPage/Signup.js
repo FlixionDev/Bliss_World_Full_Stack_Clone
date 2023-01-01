@@ -6,36 +6,18 @@ import { useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading"
 
 
-
-
-
-
 function Signup() {
   
   const toast = useToast();
   const [userdata, setUserdata] = useState([]);
   let [loading,setLoading]=useState(false)
-const navigate=useNavigate()
- async function getdata(){
-  let res=await fetch("https://blissworld.glitch.me/users")
-  let data= await res.json()
-  console.log(data)
-  setUserdata(data)
-  
-
- }
-
- async function postdata(obj){
-
-
-  let res=await fetch(`https://blissworld.glitch.me/users`,{
-    method:"POST",
-    body:JSON.stringify(obj),
-    headers:{
-        "Content-Type": "application/json"
+  const navigate=useNavigate()
+    async function getdata()
+    {
+      let res=await fetch("https://blissworld.glitch.me/users")
+      let data= await res.json()
+      setUserdata(data)
     }
-})
- }
   
 
   useEffect(() => {
@@ -58,95 +40,26 @@ const navigate=useNavigate()
   };
 
   const handleSubmit = (e) => {
-    
     e.preventDefault();
 
-   
-
-    let obj={
-
-      
-      email : formData.email,
-      password :formData.password,
-      name :formData.name,
-      address :formData.address
-   };
-   
-   let confirmpassword = formData.confirmpassword;
- 
-    console.log(userdata)
-
-    var passwordcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-
-    if(passwordcheck.test(formData.password)){
-
-    }else{
-      return toast({
-        title: "Weak Password",
-        description: "Try Again",
-        status: "error",
-        duration: 2000,
-        isClosable: true,
-      });
-    }
-
-
-
-
-
-let flag=true;
-   userdata.map(function(elm){
-    if(elm.email==obj.email){
-       
-        flag=false;
-        setFormData(initState)
-       toast({
-          title: "User already exist.",
-          description: "Try login.",
-          status: "error",
-          duration: 2000,
-          isClosable: true,
-        });
-        setTimeout(()=>{
-          navigate("/login")
-        },1000)
-        
-    }
-
-})
-if(flag){
-  if (obj.password == confirmpassword)
-  {
-    setFormData(initState)
-    postdata(obj)
-    navigate("/login")
-     toast({
-      title: "Registered Successfully.",
-      description: "Please login.",
-      status: "success",
-      duration: 2000,
-      isClosable: true,
-      position:"top"
-    });
-   
-    setTimeout(()=>{
-      navigate("/login")
-    },1000)
-      
+    fetch("https://noiseless-soapy-zucchini.glitch.me/register",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify({
+        name:formData.name,
+        email:formData.email,
+        password:formData.password
+      })
+    }).then((responce)=>{
+        responce.json().then(data=>{
+         
+          console.log(data);
+          navigate('/login')
+        })
+    })
   }
-  else {
-      
-      return toast({
-        title: "Incorrect Confirm Password",
-        description: "Try Again.",
-        status: "error",
-        duration: 2000,
-        isClosable: true,
-      });
-  }
-  
-};
-}
 
 
 
@@ -225,7 +138,6 @@ if(flag){
                         onInput={handleInput}
                         value={formData.confirmpassword}
                         name="confirmpassword"
-                        required
                       />
                     </div>
                     <div
@@ -245,7 +157,7 @@ if(flag){
                         onChange={handleInput}
                         value={formData.birthdaymonth}
                         name="confirmpassword"
-                        required
+                       
                       >
                         <option value>Birthday Month</option>
                         <option value="January">January</option>
@@ -276,7 +188,7 @@ if(flag){
                         id="FormField_26_select"
                         data-label="Birth Date"
                         data-input
-                        aria-required="true"
+                       
                       >
                         <option value>Birth Date</option>
                         <option value={1}>1</option>
@@ -329,12 +241,12 @@ if(flag){
                         className="form-input"
                        
                         data-input
-                        aria-required="true"
+                       
                         maxLength={30}
                         onInput={handleInput}
                         value={formData.name}
                         name="name"
-                        required
+                     
                         
                       />
                       <span style={{ display: "none" }} />
@@ -355,7 +267,7 @@ if(flag){
                         className="form-input"
                         data-label="Last Name"
                         data-input
-                        aria-required="true"
+                      
                         maxLength={30}
                         data-field-type="LastName"
                       />
@@ -377,12 +289,12 @@ if(flag){
                         className="form-input"
                         data-label="Address Line 1 (Required)"
                         data-input
-                        aria-required="true"
+                       
                         maxLength={30}
                         onInput={handleInput}
                         value={formData.address}
                         name="address"
-                        required
+                      
                       />
                       <span style={{ display: "none" }} />
                     </div>
@@ -445,7 +357,7 @@ if(flag){
                         className="form-input"
                         data-label="Zip/Postcode"
                         data-input
-                        aria-required="true"
+                       
                         maxLength={10}
                         data-field-type="Zip"
                       />
@@ -469,7 +381,7 @@ if(flag){
                         className="form-input"
                         data-label="Suburb/City"
                         data-input
-                        aria-required="true"
+                       
                         maxLength={20}
                       />
                     </div>
@@ -490,7 +402,7 @@ if(flag){
                         id="FormField_11_select"
                         data-label="Country"
                         data-input
-                        aria-required="true"
+                       
                         name="FormField[2][11]"
                         data-field-type="Country"
                       >
@@ -839,7 +751,7 @@ if(flag){
                       <select
                         name="FormField[2][12]"
                         className="form-select"
-                        aria-required="true"
+                       
                         id="FormField_12_select"
                         data-label="State/Province"
                         data-input
@@ -950,7 +862,7 @@ if(flag){
                         className="form-input"
                         data-label="Phone Number (Required)"
                         data-input
-                        aria-required="true"
+                       
                         maxLength={19}
                         data-field-type="Phone"
                       />
