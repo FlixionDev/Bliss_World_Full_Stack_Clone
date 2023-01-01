@@ -22,6 +22,7 @@ const Checkout = () => {
   }
 
   const changeCartState = () => {
+    fetch(`https://noiseless-soapy-zucchini.glitch.me/cart`)
     usestate(cartData);
   };
   console.log("checking state", state);

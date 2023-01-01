@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 import { ChevronDownIcon, MinusIcon, AddIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 import {
   Menu,
   MenuButton,
@@ -13,44 +14,55 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  MenuOptionGroup,
+  MenuItemOption,
   Box,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import Cartmodal from "../../CartPage/Cartmodal";
+import { useRef } from "react";
 
 export const ProductList = () => {
-  
+  const ref1 = useRef();
   const { endpoint1 } = useParams();
   // console.log(endpoint);
   const [totalProducts, setTotalProducts] = useState([]);
   const [categories, setCategories] = useState({});
   // const endpoint1 = "bestSeller";
   useEffect(() => {
-    fetch(`https://blissworld.glitch.me/${endpoint1}`)
+    fetch(`https://noiseless-soapy-zucchini.glitch.me/products`)
       .then((res) => res.json())
       .then((data) => {
         // console.log("total data", data);
-        setTotalProducts(data.totalData);
+        setTotalProducts(data);
         setCategories({ ...data.categories });
       })
       .catch((err) => {
         console.log("something went wrong");
       });
   }, []);
+  const handleClickFilterSort = () => {
+    console.log(ref1.current)
+  }
 
   return (
     <div className="parent-container">
       <div className="sorting-div">
         <div className="sortBy">
           <label>SORT BY:</label>
-          <Menu zIndex="dropdown">
-            <MenuButton >Default<ChevronDownIcon /></MenuButton>
-            <MenuList zIndex="1000" >
+          <Menu  >
+            <MenuButton ref={ref1}>Default<ChevronDownIcon /></MenuButton>
+            <MenuList onClick={handleClickFilterSort} zIndex="1000" >
               <MenuItem>Default</MenuItem>
               <MenuItem>A to Z</MenuItem>
               <MenuItem>Z to A</MenuItem>
-              <MenuItem>Price: Ascending</MenuItem>
-              <MenuItem>Price: Descending</MenuItem>
+              {/* <MenuOptionGroup defaultValue='' title='Order' type='radio'>
+                <MenuItemOption value='desc'>Default</MenuItemOption>
+                <MenuItemOption value='AtoZ'>A to Z</MenuItemOption>
+                <MenuItemOption value='desc'>Z to A</MenuItemOption>
+                <MenuItemOption value='asc'>Ascending</MenuItemOption>
+                <MenuItemOption value='desc'>Descending</MenuItemOption>
+              </MenuOptionGroup> */}
             </MenuList>
           </Menu>
         </div>
