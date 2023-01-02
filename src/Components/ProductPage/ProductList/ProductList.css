@@ -14,12 +14,15 @@
   
   background-color: #f2f7ff;
 }
+/* .css-162mkon {
+  display: none;
+} */
 
 .sortBy {
   display: flex;
   /* flex-wrap: wrap; */
   gap: 30px;
-  z-index: 500;
+  /* z-index: 500; */
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   
@@ -27,6 +30,7 @@
 
 .sortBy > label {
   font-weight: 500;
+  margin-top: 2px;
 }
 
 .left-filter {

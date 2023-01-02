@@ -15,6 +15,7 @@ const orderSchema= mongoose.Schema({
     price:Number,
     finalPrice:Number,
     quantity:Number,
+    user_id:String,
     user : {
         _id:mongoose.Types.ObjectId
     }

@@ -28,6 +28,19 @@ productRouter.get('/:id',async (req,res)=>{
         })
     }
 })
+// productRouter.get('/filter',async (req,res)=>{
+//     const id=req.query;
+//     // console.log(id);
+//     console.log(id)
+//     // try{
+//     //     const products=await Productsmodel.findById(id);
+//     //     return res.send(products)
+//     // }catch(err){
+//     //     return res.send({
+//     //         message : "error occur"
+//     //     })
+//     // }
+// })
 orderRouter.get('/',async(req,res)=>{
     try{
         let order=await Ordersmodel.find();
