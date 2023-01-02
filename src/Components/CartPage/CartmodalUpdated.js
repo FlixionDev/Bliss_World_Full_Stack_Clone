@@ -2,35 +2,27 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./CartNCheckout.css";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { action } from "../../Redux/action";
 import { ProductList } from "../ProductPage/ProductList/ProductList";
 import { useNavigate } from "react-router-dom";
 import CartDiv from "./CartDiv";
 import { useToast } from "@chakra-ui/react";
 import { LineAxisOutlined } from "@mui/icons-material";
 import axios from "axios"
+require('dotenv').config();
+const DB_API=process.env.DB_API;
+import { userId } from "../../UseridContext/userid";
 
 function Cartmodal() {
-  let userId='63ab2dc8f2574a4d4f6d1f50'
-  const api=`http://localhost:5000`
 
   const nav = useNavigate();
   const couponToast = useToast();
-  const [state, setPageState] = useState([]);
   const [cartData,setCartData]=useState([])
   const [totalItemTypesInCart,setTotalItemTypesInCart]=useState()
   const [cartTotal, setCartTotal] = useState(0);
-  const dispatch = useDispatch();
-
-  // const cartData = useSelector((storeData) => {
-  //   return storeData.cart;
-  // });
-
+  
   useEffect(()=>{
-    axios.get(`${api}/${userId}/cart`)
+    axios.get(`${DB_API}/${userId}/cart`)
     .then((res)=>{
-      console.log("Response after Axios.get in cartModel--->",res)
       setTotalItemTypesInCart(res.data.totalCartProducts)
       setCartData(res.data.data)
     })
@@ -38,9 +30,10 @@ function Cartmodal() {
       console.log("error after axios.get in cartModel",err)
     })
   },[])
-  console.log("cartdata in modal", cartData);    
+  console.log("cartdata in modal", cartData,"---->",userId,DB_API);    
 
-  
+  console.log("userId-&Api----->",userId,DB_API)
+
   const applycoupon = () => {
     let discountvalue = document.getElementById("blissCouponCode").value;
     if (discountvalue === "masai20") {
@@ -64,43 +57,15 @@ function Cartmodal() {
     }
   };
   
-  useEffect(() => {
-    setPageState(cartData)
-  }, []);
-  console.log("checking state", state);
-  
-  const cartTotalPrice = (item) => {
-    setCartTotal((prev) => prev + item.count * item.price);
-  };
-
-  const increaseTotalPrice = (item) => {
-    console.log("increase function is calling", item);
-    setCartTotal((prev) => prev + item.price);
-  };
-  const decreaseTotalPrice = (item) => {
-    console.log("decrease function is calling", item);
-    setCartTotal((prev) => prev - item.price);
-  };
-
-  const decCountCart = (item) => {
-    let match = cartData.filter((ele) => ele.id === item.id);
-    if (match.length > 0) {
-      match[0].count--;
-      let newCartData = cartData.filter((ele) => ele.id !== item.id);
-      action([...newCartData, match[0]], dispatch);
-    }
-    decreaseTotalPrice(item);
-  };
-
-  const incCountCart = (item) => {
-    let match = cartData.filter((ele) => ele.id === item.id);
-    if (match.length > 0) {
-      match[0].count++;
-      let newCartData = cartData.filter((ele) => ele.id !== item.id);
-      action([...newCartData, match[0]], dispatch);
-    }
-    increaseTotalPrice(item);
-  };
+ function cartTotalPrice(){
+   let totalPrice=cartData.reduce(function(acc,ele){
+    return acc+ele.finalPrice
+   },0)
+   setCartTotal(totalPrice)
+   console.log("totalPrice--->",totalPrice)
+ }
+ cartTotalPrice()
+ console.log("cartTotal State-->",totalPrice)
 
   function openn() {
     document.getElementById("cancelcoupen").style.display = "block";
@@ -144,7 +109,7 @@ function Cartmodal() {
         </div>
         {cartData.map((e) => {
           return (
-            <div id="datadiv" onLoad={() => cartTotalPrice(e)}>
+            <div id="datadiv" onLoad={cartTotalPrice()}>
               <div id="datadivchild1">
                 <img src={e.image1} alt="gh" />
               </div>
@@ -186,7 +151,7 @@ function Cartmodal() {
                     />
                   </div>
                   <p id="idp">Remove</p>
-                  <p id="doller">${e.price}</p>
+                  <p id="doller">${e.finalPrice}</p>
                 </div>
               </div>
             </div>

@@ -98,7 +98,7 @@ export const ProductDescription = () => {
               <Button>1</Button>
               {/* <IconButton aria-label="Add to friends" icon={<AddIcon />} /> */}
             </ButtonGroup>
-
+            {console.log("Product on productDetail Page--->",product)}
             <AtcBtn
               item={product}
               btnName="ADD TO CART"
