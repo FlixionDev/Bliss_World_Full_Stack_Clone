@@ -1,13 +1,20 @@
 const express=require('express')
 const router=express.Router()
 
-const{CartModel,getAllCartProducts,updateCartProduct,deleteCartProduct,addToCart,deleteManyFromCart}=require('../db/CartFunctions')
+const{CartModel,getAllCartProducts,getCartProductsByUserid,updateCartProduct,deleteCartProduct,addToCart,deleteManyFromCart}=require('../db/CartFunctions')
 
 router.get('/cart',async(req,res)=>{
-    const {page=1,pageLimit,sortOrder='asc',sortBy='price'}=req.query
-    const {totalCartProducts,cartProducts}=await getAllCartProducts(Number(page),Number(pageLimit),sortOrder,sortBy)
+    const {totalCartProducts,cartProducts}=await getAllCartProducts()
     return res.send({totalCartProducts,data:cartProducts})
 })
+
+router.get('/:userId/cart',async(req,res)=>{
+    const userId=req.params.userId
+    console.log(userId)
+    const {totalCartProducts,cartProducts}=await getCartProductsByUserid(userId)
+    return res.send({totalCartProducts,data:cartProducts})
+})
+
 
 router.post('/:userId/cart',async(req,res)=>{
     let userId=req.params.userId

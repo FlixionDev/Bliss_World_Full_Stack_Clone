@@ -4,7 +4,7 @@ const cors = require('cors');
 const connect = require('./db/connect');
 const cartRoute=require('./routes/cart.routes')
 const {orderRouter,productRouter} =require('./controllers/products.controller')
-// app.use(cors()); 
+app.use(cors()); 
 app.use(express.json()); 
 
 
