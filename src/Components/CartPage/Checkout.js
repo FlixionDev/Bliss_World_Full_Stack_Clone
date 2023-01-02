@@ -393,7 +393,6 @@ const Checkout = () => {
               </div>
               <div>Apply</div>
             </div>
-            {/* <button id="coupensub">Enter Coupon code</button> */}
           </div>
 
           <div id="finaldivv">
