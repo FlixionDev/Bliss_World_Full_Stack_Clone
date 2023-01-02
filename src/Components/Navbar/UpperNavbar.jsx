@@ -2,16 +2,20 @@ import React from "react";
 
 import { Box } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import { LocalMall, Login, Place } from "@mui/icons-material";
+import { LocalMall, Login, Place,Person, LoginRounded } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 import CartDiv from "../CartPage/CartDiv";
 
 
 export default function UpperNavbar() {
+  const token=localStorage.getItem('userToken');
   const nav = useNavigate();
   const goToLogin=()=>{
     nav("/login");
+  }
+  const goToProfile=()=>{
+    
   }
 
  
@@ -54,14 +58,31 @@ export default function UpperNavbar() {
       </Box>
 
       <Box  display="flex" mt="2" ml="570">
-        <Box>
+        {
+          token ? <Box>
           <Box>
-            <Login onClick={goToLogin} style={{ fontSize: "35px" }} />
+            <Person onClick={goToProfile} style={{ fontSize: "35px" }} />
+          </Box>
+          <Box onClick={goToProfile} >
+            <p>Profile</p>
+          </Box>
+        </Box> : <Box>
+          <Box>
+            <LoginRounded onClick={goToLogin} style={{ fontSize: "35px" }} />
           </Box>
           <Box onClick={goToLogin} >
             <p>Login</p>
           </Box>
         </Box>
+        }
+        {/* <Box>
+          <Box>
+            <Person onClick={goToLogin} style={{ fontSize: "35px" }} />
+          </Box>
+          <Box onClick={goToLogin} >
+            <p>Login</p>
+          </Box>
+        </Box> */}
 
         <Box onClick={()=> CartDiv()} mr="5" ml="10">
           <Box>

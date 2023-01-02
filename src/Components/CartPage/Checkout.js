@@ -16,25 +16,74 @@ const Checkout = () => {
   const cartData = useSelector((storeData) => {
     return storeData.cart;
   });
-  //console.log([...cartData])
 
-  const sendToOrderConfirm=()=>{
+  const sendToOrderConfirm= async()=>{
+
+    let usertoken=localStorage.getItem("userToken");
+    
+    //console.log(usertoken)
+    let response=await fetch(`https://noiseless-soapy-zucchini.glitch.me/user`,{
+      method:"POST",
+      headers:{
+        "auth":usertoken
+      }
+    })
+    let token  = await response.json();
+    console.log(token.userId)
+    console.log(state)
+    //adding data to orders
+    let res=await fetch(`https://noiseless-soapy-zucchini.glitch.me/orders`,{
+      method:"POST",
+      body:JSON.stringify(state),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
+    await fetch(`https://noiseless-soapy-zucchini.glitch.me/${token.userId}/cart`,{
+      method:"DELETE",
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
 
     nav("/orderconfirm")
   }
 
-  const changeCartState = () => {
-    usestate(cartData);
+  const changeCartState = async () => {
+    let usertoken=localStorage.getItem("userToken");
+    
+    //console.log(usertoken)
+    let response=await fetch(`https://noiseless-soapy-zucchini.glitch.me/user`,{
+      method:"POST",
+      headers:{
+        "auth":usertoken
+      }
+    })
+    let token  = await response.json();
+    let cartResponse=await fetch(`https://noiseless-soapy-zucchini.glitch.me/cart`)
+    let cart=await cartResponse.json();
+    let cartdata=cart.data.filter((el)=>{
+      //console.log(el.user._id)
+      return el.user_id===token.userId
+    })
+    //console.log(cartdata)
+    usestate(cartdata)
+     //console.log(cart.data)
+     //console.log(token.userId)
+    // usestate(cartData);
   };
   console.log("checking state", state);
 
   useEffect(() => {
     changeCartState();
+    
   }, []);
 
   const cartTotalPrice = (item) => {
-    setCartTotal((prev) => prev + item.count * item.price);
+    //console.log(item)
+    setCartTotal((prev) => prev + item.quantity * item.price);
   };
+  //console.log(cartTotal)
 
   
 

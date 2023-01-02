@@ -5,18 +5,19 @@ import { Button, ButtonGroup, IconButton } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import { useParams } from "react-router-dom";
 
-export const ProductDescription = () => {
+export const ProductDescription = (props) => {
+  // console.log(props)
   const [product, setProduct] = useState({});
   const { endpoint, id } = useParams();
-  console.log(endpoint, id);
+  //console.log(endpoint, id);
 
   useEffect(() => {
-    fetch(`https://blissworld.glitch.me/${endpoint}`)
+    fetch(`https://noiseless-soapy-zucchini.glitch.me/products`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("total data", data);
-        let pro = data.totalData.filter((e) => e.id == id);
-        // console.log("pro", pro);
+       // console.log("total data", data);
+        let pro = data.filter((e) => e._id == id);
+         //console.log("pro", pro);
         setProduct({ ...pro[0] });
         // setTotalProducts(data.totalData);
         // setCategories({ ...data.categories });
@@ -25,7 +26,7 @@ export const ProductDescription = () => {
         console.log("something went wrong");
       });
   }, []);
-  console.log(product);
+ // console.log(product);
 
   return (
     <div className="product-description-main-container">

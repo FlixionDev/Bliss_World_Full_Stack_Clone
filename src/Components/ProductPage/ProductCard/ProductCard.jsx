@@ -9,9 +9,9 @@ import { IoMdHeartHalf } from "react-icons/io";
 
 function ProductCard({ item, endpoint }) {
   const nav = useNavigate();
-
+  //console.log(item)
   const handleCardClick = (item) => {
-    nav(`/${endpoint}/${item.id}`);
+    nav(`/${endpoint}/${item._id}`);
   };
 
   return (
