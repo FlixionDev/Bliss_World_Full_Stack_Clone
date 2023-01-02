@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 let DB_API="https://noiseless-soapy-zucchini.glitch.me"
 
 
-export const useridContext=createContext()
+export const UseridContext=createContext()
 
 export default function UseridContextProvider({children}){
     const [userIdState,setUserIdState]=useState()
@@ -26,8 +26,8 @@ export default function UseridContextProvider({children}){
     })
     
     return(
-        <useridContext.Provider value={{userIdState,DB_API}}>
+        <UseridContext.Provider value={{userIdState,DB_API}}>
          {children}
-        </useridContext.Provider>
+        </UseridContext.Provider>
     )
 }

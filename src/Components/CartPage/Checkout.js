@@ -7,29 +7,18 @@ import { FaPlus, FaMinus, FaUnlockAlt, FaQuestionCircle } from "react-icons/fa";
 import { Button, Flex, Text, Textarea } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom";
+import { UseridContext } from "../../UseridContext/UseridContextProvider";
+import { useContext } from "react";
 
 const Checkout = () => {
+  const {userIdState,DB_API}=useContext(UseridContext)
   const [state, usestate] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const nav= useNavigate();
-
   const cartData = useSelector((storeData) => {
     return storeData.cart;
   });
-
   const sendToOrderConfirm= async()=>{
-
-    let usertoken=localStorage.getItem("userToken");
-    
-    //console.log(usertoken)
-    let response=await fetch(`https://noiseless-soapy-zucchini.glitch.me/user`,{
-      method:"POST",
-      headers:{
-        "auth":usertoken
-      }
-    })
-    let token  = await response.json();
-    console.log(token.userId)
     console.log(state)
     //adding data to orders
     let res=await fetch(`https://noiseless-soapy-zucchini.glitch.me/orders`,{
@@ -39,7 +28,7 @@ const Checkout = () => {
         "Content-Type":"application/json"
       }
     })
-    await fetch(`https://noiseless-soapy-zucchini.glitch.me/${token.userId}/cart`,{
+    await fetch(`https://noiseless-soapy-zucchini.glitch.me/${userIdState}/cart`,{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"
@@ -64,10 +53,11 @@ const Checkout = () => {
     let cart=await cartResponse.json();
     let cartdata=cart.data.filter((el)=>{
       //console.log(el.user._id)
-      return el.user_id===token.userId
+      return el.user_id===userIdState
     })
     //console.log(cartdata)
-    usestate(cartdata)
+    console.log("cartProduct in checkout--->",cartdata)
+    usestate([...cartdata])
      //console.log(cart.data)
      //console.log(token.userId)
     // usestate(cartData);

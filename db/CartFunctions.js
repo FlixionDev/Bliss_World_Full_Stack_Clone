@@ -79,18 +79,18 @@ async function updateCartProduct(userId,productId,productData){
 }
 
 async function deleteCartProduct(userId,productId){
-  //  const user=await UserModel.findById(userId)
-  //  if(!user){
-  //     throw new Error('Please login before adding to cart userId not found')
-  //  }
+   const user=await UserModel.findById(userId)
+   if(!user){
+      throw new Error('Please login before adding to cart userId not found')
+   }
 
   let productInCart =await CartModel.findById(productId)
   if(!productInCart){
     throw new Error('Product not available in cart refresh')
   }
-//   if(productInCart.user_id!==userId){
-//      throw new Error('Please login first to make changes in cart')
-//  }
+  if(productInCart.user_id!==userId){
+     throw new Error('Please login first to make changes in cart')
+ }
  productInCart=await CartModel.findByIdAndDelete(productId)
  return productInCart
 
