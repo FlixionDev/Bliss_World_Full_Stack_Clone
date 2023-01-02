@@ -1,0 +1,49 @@
+.container-div {
+    background-image: linear-gradient(#d4deff, white);
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.middle-div {
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    /* background-color: rgb(222, 217, 226); */
+    background-image: linear-gradient(rgb(222, 217, 226), white);
+    z-index: 1;
+}
+
+.inner-container {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+}
+
+.btn111 {
+    color: white;
+    width: 180px;
+    height: 36px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #8cd0e3;
+    box-shadow: 3px 3px 3px #f0f031;
+    -webkit-transition: opacity ls ease-in-out;
+    -moz-transition: opacity ls ease-in-out;
+    -ms-transition: opacity ls ease-in-out;
+    -o-transition: opacity ls ease-in-out;
+    transition: opacity ls ease-in-out;
+    border: none;
+}
+
+.btn111:hover {
+    background-color: #948ad3;
+    color: white;
+    box-shadow: 3px 3px 3px pink;
+}
+
+.child1 {
+    margin-top: 15%;
+    margin-left: 6%;
+    font-family: 'Allerta Stencil', sans-serif;
+}

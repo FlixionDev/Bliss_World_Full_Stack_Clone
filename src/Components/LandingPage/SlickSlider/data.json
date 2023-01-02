@@ -1,0 +1,97 @@
+[{
+        "id": 1,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/434/1543/Bundle_6__LS_Body_Butter_Grapefruit_Body_Butter_Blood_Orange_Body_Butter_Naked_Body_Butter_all_full_size_200_ML_1__10748.1659723177.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/434/1606/Holiday_Image_Resize_Body_Butter_Collection_01__30620.1666282522.jpg",
+        "title": "Butter Together Body Butter Set",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 48
+    },
+    {
+        "id": 2,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/477/1567/Deluxe_Spa_Facial_Set_Product_Contents__71216.1669050157.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/477/1566/Deluxe_Spa_Facial_Set_Front_Right__23022.1667494068.jpg",
+        "title": "Deluxe Spa Facial Holiday Set",
+        "description": "8-Piece Facial Gift Set | A $45 Value",
+        "price": 25
+    },
+    {
+        "id": 3,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/430/1333/Bundle_1__LS_Soapy_Suds_LS_Body_Butter__71793.1643933135.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/430/1605/Holiday_Image_Resize_Brighter_Lemon_Sage_body_butter_soapy_suds_01__58456.1666282492.jpg",
+        "title": "Lemon Love Duo",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 24
+    },
+    {
+        "id": 4,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/428/1328/BUNDLE_2_1__68259.1643740166.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/428/1328/BUNDLE_2_1__68259.1643740166.jpg",
+        "title": "Let’s C Results Skincare Kit",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 79
+    },
+    {
+        "id": 5,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/474/1571/Min_Vault_A__33642.1664406879.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/474/1571/Min_Vault_A__33642.1664406879.jpg",
+        "title": "Mini Holiday Vault",
+        "description": "7-piece stocking stuffer set",
+        "price": 20
+    },
+    {
+        "id": 6,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/484/1611/Ultimate_At_Home_Facial_Kit_Front_with_Contents__46706.1669659544.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/484/1610/Ultimate_At_Home_Facial_Kit_Front__89595.1667336671.jpg",
+        "title": "Ultimate At-Home Facial Set",
+        "desciption": "6-Piece Facial Gift Set | A $40 Value",
+        "price": 20
+    },
+    {
+        "id": 7,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/388/1199/BLISS_DAY_NIGHT_Serum_Kit_8ml_COMBO_FINALupdated__49523.1669743255.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/388/1262/night-day-duo-swatch__03040.1669743255.jpg",
+        "title": "AM/PM Serum Duo",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 15
+    },
+    {
+        "id": 8,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/465/1488/Trevor_Project_Kit_OPENwSTICKERS_-_Resize_1080x1080__06430.1657604999.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/465/1485/Trevor_Project_Kit_CLOSED_-_Resize_1080x1080__10703.1657604996.jpg",
+        "title": "Bliss x Trevor Project Pride Set",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 48
+    },
+    {
+        "id": 9,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/452/1396/Bundle_3__Block_Star_Bundle__55999.1649698264.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/452/1396/Bundle_3__Block_Star_Bundle__55999.1649698264.jpg",
+        "title": "Block This Way Duo",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 20
+    },
+    {
+        "id": 11,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/451/1397/Bundle_2__Block_Star_Bright_Idea_Serum__45631.1649698291.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/451/1397/Bundle_2__Block_Star_Bright_Idea_Serum__45631.1649698291.jpg",
+        "title": "Brighten Block Duo",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 15
+    },
+    {
+        "id": 12,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/453/1398/Bundle_1__Rest_Assured_Eye_Cream_Bright_Idea_Serum__24624.1649888091.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/453/1413/2.8_emulate_v3__93197.1651527966.jpg",
+        "title": "Get It Bright Duo",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 20
+    },
+    {
+        "id": 13,
+        "image1": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/459/1418/Mini_Bundle_2__17220.1651532557.jpg",
+        "image2": "https://cdn11.bigcommerce.com/s-9p889rxpkb/images/stencil/800w/products/459/1418/Mini_Bundle_2__17220.1651532557.jpg",
+        "title": "Glow Getter Travel Mini Set",
+        "description": "Limited-Edition Pride Block Star Set",
+        "price": 20
+    }
+]

@@ -1,0 +1,21 @@
+.btn {
+    color: white;
+    width: 180px;
+    height: 36px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #8cd0e3;
+    box-shadow: 3px 3px 3px #f0f031;
+    -webkit-transition: opacity ls ease-in-out;
+    -moz-transition: opacity ls ease-in-out;
+    -ms-transition: opacity ls ease-in-out;
+    -o-transition: opacity ls ease-in-out;
+    transition: opacity ls ease-in-out;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #948ad3;
+    color: white;
+    box-shadow: 3px 3px 3px pink;
+}
