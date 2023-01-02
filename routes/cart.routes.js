@@ -1,11 +1,11 @@
 const express=require('express')
 const router=express.Router()
 
-const{CartModel,getAllCartProducts,updateCartProduct,deleteCartProduct,addToCart}=require('../db/CartFunctions')
+const{CartModel,getAllCartProducts,updateCartProduct,deleteCartProduct,addToCart,deleteManyFromCart}=require('../db/CartFunctions')
 
 router.get('/cart',async(req,res)=>{
-    const {page=1,pageLimit=5,sortOrder='asc',sortBy='price'}=req.query
-    const {totalCartProducts,cartProducts}=await getAllCartProducts(page,pageLimit,sortOrder,sortBy)
+    const {page=1,pageLimit,sortOrder='asc',sortBy='price'}=req.query
+    const {totalCartProducts,cartProducts}=await getAllCartProducts(Number(page),Number(pageLimit),sortOrder,sortBy)
     return res.send({totalCartProducts,data:cartProducts})
 })
 
@@ -29,7 +29,7 @@ router.patch('/:userId/cart/:productId', async(req,res)=>{
     try {
         productInCart=await updateCartProduct(userId,productId,productData)
     } catch (error) {
-        return res.status(500).send({message:'First login before update tha cart'})
+        return res.status(500).send({message:'First login before update the cart or Id not exist'})
     }
     return res.send({data:productInCart})
 
@@ -41,7 +41,7 @@ router.delete('/:userId/cart/:productId', async(req,res)=>{
     try {
         deletedProduct=await deleteCartProduct(userId,productId)
     } catch (error) {
-       return res.status(500).send({message:'You have to login before deleting from cart'}) 
+       return res.status(500).send({message:'You have to login before deleting from cart or Id does not exist'}) 
     }
     if(deletedProduct){
         return res.send({data:deletedProduct})
@@ -49,6 +49,23 @@ router.delete('/:userId/cart/:productId', async(req,res)=>{
     else{
         return res.status(404).send({message:'Product with given id not exist to delete plz refresh'})
     }
+})
+
+router.delete('/:userId/cart',async(req,res)=>{
+    const userId=req.params.userId
+    let deletedProducts=null
+    try {
+        deletedProducts=await deleteManyFromCart(userId)
+    } catch (error) {
+        return res.status(500).send({message:'You have to login before deleting from cart or Id does not exist'}) 
+    }
+    if(deletedProducts){
+        return res.send({data:deletedProducts})
+    }
+    else{
+        return res.status(404).send({message:'Product with given id not exist to delete plz refresh'})
+    }
+
 })
 
 module.exports=router

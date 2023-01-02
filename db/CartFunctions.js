@@ -10,13 +10,15 @@ const CartSchema=  mongoose.Schema({
     quantity:Number,
     user : {
         _id:mongoose.Types.ObjectId
-    }
+    },
+    user_id:mongoose.Types.ObjectId
+    
 })
 const CartModel=mongoose.model('cart',CartSchema)
 
-async function getAllCartProducts({page,pageLimit,sortOrder,sortBy}){
+async function getAllCartProducts(sortOrder,sortBy){
     let totalCartProducts=await CartModel.count()
-    let cartProducts=await CartModel.find().skip((page-1)*pageLimit).limit(5).sort({
+    let cartProducts=await CartModel.find().sort({
         [sortBy]:sortOrder=='asc'?1:-1
     })
 
@@ -38,13 +40,11 @@ async function addToCart(userId,productData){
         })
 
         let updatedProductInCart=await CartModel.findById(productData._id)
-        console.log("productInCart 3-->",updatedProductInCart)
 
         return updatedProductInCart
     
      }
      else{
-        console.log("calling inside else")
           const productAddedInCart=await CartModel.create({
                ...productData,
                finalPrice:productData.price,
@@ -87,12 +87,18 @@ async function deleteCartProduct(userId,productId){
   if(!productInCart){
     throw new Error('Product not available in cart refresh')
   }
-  if(productInCart.user._id!==userId){
-     throw new Error('Please login first to make changes in cart')
- }
+//   if(productInCart.user._id!==userId){
+//      throw new Error('Please login first to make changes in cart')
+//  }
  productInCart=await CartModel.findByIdAndDelete(productId)
  return productInCart
 
+}
+
+async function deleteManyFromCart(userId){
+    let status=await CartModel.deleteMany({user_id:userId})
+
+    return status
 }
 
 module.exports={
@@ -100,5 +106,6 @@ module.exports={
     getAllCartProducts,
     updateCartProduct,
     deleteCartProduct,
-    addToCart
+    addToCart,
+    deleteManyFromCart
 }
