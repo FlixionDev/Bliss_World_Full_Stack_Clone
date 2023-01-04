@@ -33,57 +33,57 @@ We have successfully created the full-stack clone of <a href='https://www.blissw
 
 Created the home page and added a dropdown navbar, when u check our bestsellers you can go to the product page.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672835772814/d60ffbc7-bc54-454d-834a-ec715e2fc4c3.jpeg align="center")
+![](https://i.imgur.com/qzZ86v4.jpg)
 
 ## Login & Signup
 
 You have to log in if u want to add a product to your cart, and if u enter the wrong email or password don't worry it will give an error message to make it correct. If you are not registered yet and trying to log in it will not log u in and suggest to register first.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672835950178/9d4cebfb-b01d-435c-96b7-966dfabf0f4c.jpeg align="center")
+![](https://i.imgur.com/HtP6sgU.jpg)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672835959060/54d8cae7-3412-4e01-aabb-7709f63466ea.jpeg align="center")
+![](https://i.imgur.com/HXV1LsH.jpg)
 
 ## Product Page
 
 Here are all the products if you want to sort according to salary ascending or desc you are able to from the top right corner, we have applied all filter and sorting properties inside our backed code using mongoose.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672836431003/1a2a5167-7c7a-47f7-aac6-b983f6fa9f73.jpeg align="center")
+![](https://i.imgur.com/5DWJ8yj.jpg)
 
 ## Product Detail Page
 
 You can check out the full description of the selected product and also able to check the description video of the product which we are embedded from youtube. If you press add to cart button u are able to move to the cart.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672836569983/3520be0d-1f0f-4000-9b76-874460053aa3.jpeg align="center")
+![](https://i.imgur.com/Q8Pq9qY.jpg)
 
 ## Cart Page
 
 Here all the cart products will be displayed which you have added under your login id, you can increase the quantity and get the cart total on your own, and want to delete it is easy just click remove. Now, let's move to checkout by clicking the checkout button.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672836768201/a0d344fb-5560-4231-a1cf-8248ed6b0a0d.jpeg align="center")
+![](https://i.imgur.com/AzcDrPj.jpg)
 
 ### Check the cart backed using postman
 
 Since you have added 3 products to the cart you can get the overview of the database using postman as we fetch the cart detail using userId we get 3 the same products as listed on UI.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672836816160/3eaf82c9-06a8-48e1-83ad-83797304e5db.png align="center")
+![](https://i.imgur.com/QA41UAE.png)
 
 ## Checkout Page
 
 If you are adding a product to the cart collection when added to cart the same products from the cart collection are displayed here to reverify and update the payment details. You can place an order by clicking on place order.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672837143300/ac41d17a-a73b-4ac9-b4f3-c40a2948967f.jpeg align="center")
+![](https://i.imgur.com/3dSE9GO.jpg)
 
 ## Order Page
 
 You have placed the order and you got all 3+1 prior ordered projects on your order page. Since you have placed the order you cart collection got empty.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672837497177/8fff7e68-cb18-41be-af95-08dfe5429227.jpeg align="center")
+![](https://i.imgur.com/vxMwDfc.jpg)
 
 ### Order placed and cart collection got empty
 
 Product moded from cart collection to order collection under similar userId.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672837812257/93800f44-82d3-4dc4-944e-5561ec75ee92.png align="center")
+![](https://i.imgur.com/AYqStEV.png)
 
 ### Difficulties we faced-
 
