@@ -22,7 +22,7 @@ function App() {
       <div>
         <AllRoutes />
       </div>
-      <Cartmodal />
+      
       <Footer />
     </div>
   );

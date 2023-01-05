@@ -2,10 +2,9 @@ import React from "react";
 
 import { Box } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import { LocalMall, Login, Place,Person, LoginRounded } from "@mui/icons-material";
+import { LocalMall, Login, Place,Person, LoginRounded,LogoutRounded } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate } from "react-router-dom";
-import CartDiv from "../CartPage/CartDiv";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 export default function UpperNavbar() {
@@ -15,7 +14,8 @@ export default function UpperNavbar() {
     nav("/login");
   }
   const goToProfile=()=>{
-    
+    localStorage.removeItem('userToken')
+    nav('/login')
   }
 
  
@@ -61,10 +61,10 @@ export default function UpperNavbar() {
         {
           token ? <Box>
           <Box>
-            <Person onClick={goToProfile} style={{ fontSize: "35px" }} />
+            <LogoutRounded  onClick={goToProfile} style={{ fontSize: "35px" }} />
           </Box>
           <Box onClick={goToProfile} >
-            <p>Profile</p>
+            <p>Logout</p>
           </Box>
         </Box> : <Box>
           <Box>
@@ -84,7 +84,7 @@ export default function UpperNavbar() {
           </Box>
         </Box> */}
 
-        <Box onClick={()=> CartDiv()} mr="5" ml="10">
+        <Box onClick={()=> nav("/cart")} mr="5" ml="10">
           <Box>
             <LocalMall style={{ fontSize: "35px" }} />
           </Box>

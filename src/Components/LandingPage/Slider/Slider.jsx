@@ -6,6 +6,7 @@ import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArro
 import { SliderItems } from './Data';
 import '../Slider/Slider.css';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
   position: relative;
@@ -81,6 +82,7 @@ const Description = styled.p`
 `;
 
 function Slider() {
+  const nav=useNavigate()
   let [slideIndex, setSlideIndex] = useState(0);
   
   const handleClick = (direction) => {
@@ -115,6 +117,7 @@ function Slider() {
                   <button
                     style={{ backgroundColor: element.btnback }}
                     id="neonShadow"
+                    onClick={()=>{nav('/product/bestSeller')}}
                   >
                     {element.btnname}
                   </button>

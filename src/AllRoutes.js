@@ -22,7 +22,7 @@ export const AllRoutes = () => {
         <Route exact path="/product/:endpoint1" element={<ProductList />} />
         <Route path="/:endpoint/:id" element={<ProductDescription />} />
         <Route path="/cart" element={<Cartmodal />} />
-        <Route path="/checkout" element={<Privateroute><Checkout /></Privateroute>} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/orderconfirm" element={<Orderconfirm />} />
       </Routes>
     </div>

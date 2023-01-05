@@ -138,36 +138,6 @@ export const ProductList = () => {
         </div> */}
       </div>
       <div className="container">
-        <div className="left-filter">
-          <Accordion allowMultiple>
-            {Object.keys(categories).length > 0 &&
-              Object.keys(categories).map((category, index) => (
-                <AccordionItem key={index + 1}>
-                  {({ isExpanded }) => (
-                    <>
-                      <h2>
-                        <AccordionButton>
-                          <Box flex="1" textAlign="left">
-                            {category}
-                          </Box>
-                          {isExpanded ? (
-                            <MinusIcon fontSize="12px" />
-                          ) : (
-                            <AddIcon fontSize="12px" />
-                          )}
-                        </AccordionButton>
-                      </h2>
-                      {categories[category].map((item, index) => (
-                        <AccordionPanel key={index + 1} textAlign="left" pb={2}>
-                          {item}
-                        </AccordionPanel>
-                      ))}
-                    </>
-                  )}
-                </AccordionItem>
-              ))}
-          </Accordion>
-        </div>
         <div className="product-container">
           {totalProducts.map((item, index) => (
             <ProductCard endpoint={endpoint1} item={item} key={index + 1} />

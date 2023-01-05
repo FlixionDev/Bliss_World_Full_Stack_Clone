@@ -21,14 +21,14 @@ const Checkout = () => {
   const sendToOrderConfirm= async()=>{
     console.log(state)
     //adding data to orders
-    let res=await fetch(`https://noiseless-soapy-zucchini.glitch.me/orders`,{
+    let res=await fetch(`${DB_API}/orders`,{
       method:"POST",
       body:JSON.stringify(state),
       headers:{
         "Content-Type":"application/json"
       }
     })
-    await fetch(`https://noiseless-soapy-zucchini.glitch.me/${userIdState}/cart`,{
+    await fetch(`${DB_API}/${userIdState}/cart`,{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"
@@ -42,14 +42,14 @@ const Checkout = () => {
     let usertoken=localStorage.getItem("userToken");
     
     //console.log(usertoken)
-    let response=await fetch(`https://noiseless-soapy-zucchini.glitch.me/user`,{
+    let response=await fetch(`${DB_API}/user`,{
       method:"POST",
       headers:{
         "auth":usertoken
       }
     })
     let token  = await response.json();
-    let cartResponse=await fetch(`https://noiseless-soapy-zucchini.glitch.me/cart`)
+    let cartResponse=await fetch(`${DB_API}/cart`)
     let cart=await cartResponse.json();
     let cartdata=cart.data.filter((el)=>{
       //console.log(el.user._id)
@@ -104,7 +104,7 @@ const Checkout = () => {
               <BsCheckCircleFill fontSize="28px" color="rgb(115,210,230)" />
               <h2>Customer</h2>
             </div>
-            <div>anurag@gmail.com</div>
+            <div>admin@gmail.com</div>
             <div>
               <button>SIGNOUT</button>
             </div>
