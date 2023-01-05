@@ -51,18 +51,22 @@ const Checkout = () => {
     let token  = await response.json();
     let cartResponse=await fetch(`${DB_API}/cart`)
     let cart=await cartResponse.json();
-    let cartdata=cart.data.filter((el)=>{
-      //console.log(el.user._id)
-      return el.user_id===userIdState
-    })
-    //console.log(cartdata)
-    console.log("cartProduct in checkout--->",cartdata)
-    usestate([...cartdata])
+    let data = cart.data;
+      //console.log(data)
+        let cartdata=data.filter((el)=>{
+          //console.log(el.user._id)
+          return el.user_id===token.userId
+        })
+        console.log("hii",cartdata)
+      
+        usestate(cartdata)
+      //console.log("cartProduct in checkout--->",cart)
+    
      //console.log(cart.data)
      //console.log(token.userId)
     // usestate(cartData);
   };
-  console.log("checking state", state);
+  //console.log("checking state", state);
 
   useEffect(() => {
     changeCartState();
