@@ -1,6 +1,8 @@
 # Bliss_World_Full_Stack_Clone
 We have successfully created the full-stack clone of <a href='https://www.blissworld.com/'>Blissworld.com</a> in our backed construct week. Where we created the full backend of `Blissworld.com` in a week with a team of **4 developers**..
 
+![](https://i.imgur.com/be3sd9Y.jpg)
+
 ### Check project and code
 
 * [Checkout Website Clone](https://blissworld-fullstack-clone.netlify.app/)
@@ -103,3 +105,6 @@ Product moded from cart collection to order collection under similar userId.
 3. [Krishna Chaturvedi](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
     
 4. [Harsh Anand](https://github.com/Harsh1518)
+
+## 
+- **Editor-** [Krishna Chaturvedi](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
