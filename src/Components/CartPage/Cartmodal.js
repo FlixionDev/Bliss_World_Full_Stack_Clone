@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 // import "./CartNCheckout.css";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 import { Box, Button, Heading, HStack, Image, Text, useToast, VStack } from "@chakra-ui/react";
 import axios from "axios"
 import { UseridContext } from "../../UseridContext/UseridContextProvider";
@@ -11,6 +11,7 @@ import { useContext } from "react";
 
 function Cartmodal() {
   const {userIdState,DB_API}=useContext(UseridContext)
+  const [emptySignal,setEmptySignal]=useState(false)
   const nav = useNavigate();
   const toast = useToast();
   const [userIdState2,setUserIdState2]=useState('63b3274c1243c085fd123c56')
@@ -32,6 +33,15 @@ function getCartProducts(userid){
       console.log("Response after Axios.get in cartModel2--->",cartArrFiltered)
       setTotalItemTypesInCart(cartArrFiltered.length)
       setCartData([...cartArrFiltered])
+      return cartArrFiltered
+    }).then((cartArrFiltered)=>{
+      console.log("extra then--->",cartArrFiltered)
+      if(cartArrFiltered.length==0){
+        setEmptySignal(true)
+      }
+      else{
+        setEmptySignal(false)
+      }
     })
     .catch((err)=>{
       console.log("error after axios.get in cartModel",err)
@@ -123,22 +133,19 @@ console.log("cartdata in modal", cartData,totalItemTypesInCart);
     })
   }
 
-//  return(
-//   if(cartArrFiltered){
-//     if(cartArrFiltered.length===0){
-//       toast({
-//        title: 'Cart is empty',
-//        description: "Please add product to cart",
-//        status: 'success',
-//        duration: 3000,
-//        isClosable: true,
-//       })
-//       nav('/product/:endpoint1')
-//     }
+  const emptyCartNavigate=()=>{
+    setEmptySignal(false)
+    nav('/product/:endpoint1')
+  }
 
-//   }
-
-//  )
+  if(emptySignal){
+   return(
+    <VStack m={'80px'} spacing='40px' >
+      <Heading fontSize={'32px'} >Cart is empty add products to cart</Heading>
+      <Button border={'1px solid blue'} bg='#53BDF2' p={'5px'} borderRadius='6px' fontWeight={'bold'} onClick={emptyCartNavigate} >Continue shopping</Button>
+    </VStack>
+   )
+  }
 
 // ------------------------------------------------------------------------------------------------------
    

@@ -11,7 +11,7 @@ import { UseridContext } from "../../UseridContext/UseridContextProvider";
 import { useContext } from "react";
 
 const Checkout = () => {
-  const {userIdState,DB_API}=useContext(UseridContext)
+  let {userIdState,DB_API}=useContext(UseridContext)
   const [state, usestate] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const nav= useNavigate();
@@ -19,7 +19,7 @@ const Checkout = () => {
     return storeData.cart;
   });
   const sendToOrderConfirm= async()=>{
-    console.log(state)
+    console.log("data going inside orderCollection-->",state)
     //adding data to orders
     let res=await fetch(`${DB_API}/orders`,{
       method:"POST",
@@ -58,7 +58,7 @@ const Checkout = () => {
           return el.user_id===token.userId
         })
         console.log("hii",cartdata)
-      
+       userIdState=token.userId
         usestate(cartdata)
       //console.log("cartProduct in checkout--->",cart)
     
